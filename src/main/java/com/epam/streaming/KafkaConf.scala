@@ -12,9 +12,9 @@ object KafkaConf {
   props.put("key.serializer", "org.apache.kafka.common.serialization.IntegerSerializer")
   props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer")
 
-  private val producer: KafkaProducer[Integer, Future[String]] = new KafkaProducer[Integer, Future[String]](props)
+  private val producer: KafkaProducer[Integer, String] = new KafkaProducer[Integer, String](props)
 
-  def getProducer: KafkaProducer[Integer, Future[String]] = {
+  def getProducer: KafkaProducer[Integer, String] = {
     return producer
   }
 }
